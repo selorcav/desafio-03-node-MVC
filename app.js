@@ -7,12 +7,13 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+
 var app = express();
 
 //Import the mongoose module
 var mongoose = require('mongoose');
 //Set up default mongoose connection
-var mongoDB = (process.env.MONGODB_URI || 'mongodb+srv://usuario1:usuariodb@cluster0.rmei4.mongodb.net/<dbname>?retryWrites=true&w=majority');
+var mongoDB = (process.env.MONGODB_URI || 'mongodb+srv://usuario1:usuariodb@cluster0.rmei4.mongodb.net/formMongoDB?retryWrites=true&w=majority');
 console.log('Connecting to database...');
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 // Get Mongoose to use the global promise library
